@@ -11,26 +11,42 @@ Each test is a dict with
 TESTS = {
     "Basics": [
         {
-            "input": [3, 2],
-            "answer": 5,
-            "explanation": "3+2=?"
+            "input": ['"Greetings"'],
+            "answer": ['Greetings']
         },
         {
-            "input": [5, 7],
-            "answer": 12,
-            "explanation": "5+7=?"
+            "input": ['Hi'],
+            "answer": []
+        },
+        {
+            "input": ['good morning mister "superman"'],
+            "answer": ['superman']
+        },
+        {
+            "input": ['"this" doesn\'t make any "sense"'],
+            "answer": ['this', 'sense']
+        },
+        {
+            "input": ['"Lorem Ipsum" is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the "industry\'s standard dummy text ever since the 1500s", when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. "It was popularised in the 1960s" with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.'],
+            "answer": [
+                'Lorem Ipsum',
+                "industry\'s standard dummy text ever since the 1500s",
+                'It was popularised in the 1960s']
+        },
+        {
+            "input": ['count empty quotes ""'],
+            "answer": ['']
         }
     ],
     "Extra": [
         {
-            "input": [6, 3],
-            "answer": 9,
-            "explanation": "6+3=?"
+            "input": ['Well done, my "friend"'],
+            "answer": ['friend']
         },
+
         {
-            "input": [6, 7],
-            "answer": 13,
-            "explanation": "6+7=?"
+            "input": ["Well done, my 'friend'"],
+            "answer": []
         }
     ]
 }

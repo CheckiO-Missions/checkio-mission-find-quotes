@@ -1,1 +1,1 @@
-checkio autofillrepo --py-function sum_two --js-function sumTwo .
+checkio autofillrepo --py-function find_quotes --js-function findQuotes .

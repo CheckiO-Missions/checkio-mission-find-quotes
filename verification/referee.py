@@ -33,16 +33,21 @@ from checkio.referees import cover_codes
 
 from tests import TESTS
 
+cover_code = '''
+def cover(func, in_data):  
+    return list(func(*in_data))
+'''
+
 api.add_listener(
     ON_CONNECT,
     CheckiOReferee(
         tests=TESTS,
         function_name={
-            "python": "sum_two",
-            "js": "sumTwo"
+            "python": "find_quotes",
+            "js": "findQuotes"
         },
         cover_code={
-            'python-3': cover_codes.unwrap_args,
+            'python-3': cover_code,
             'js-node': cover_codes.js_unwrap_args
         }
     ).on_ready)
