@@ -26,6 +26,8 @@ Your task at hand is to find all quotes in the text. And, as is already usual, d
 {% if interpreter.slug == "js-node" %}
 <pre class="brush: javascript">findQuotes('"Greetings"') == ['Greetings']
 findQuotes('Hi') == []
+findQuotes('good morning mister "superman"') == ['superman']
+findQuotes('"this" doesn\'t make any "sense"') == ['this', 'sense']
 </pre>
 {% else %}
 <pre class="brush: python">find_quotes('"Greetings"') == ['Greetings']
